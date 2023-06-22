@@ -45,30 +45,26 @@ export default function Home() {
 
   return (
     <div className="max-w-4xl mx-auto mt-12">
-      <h1 className="text-3xl font-bold text-center mb-8">Contact</h1>
+      <h1 className="text-2xl font-bold text-center p-4">Let's work together</h1>
       {error && (
         <p className="text-red-500 mb-4 text-xl">{error}</p>
       )}
-
-      <div className="mb-4">
-        <label htmlFor="name" className="block mb-2 font-semibold">Name</label>
+      <form className='max-w-[600px] m-auto'>
+      <div className="grid grid-cols-2 gap-2">
         <input
           id="name"
           name="name"
           type="text"
-          className={`border p-2 w-full ${touched.name && !values.name ? 'border-red-500' : ''}`}
+          className={`border shadow-lg p-3 ${touched.name && !values.name ? 'border-red-500' : ''}`}
           value={values.name}
           onChange={handleChange}
           onBlur={onBlur}
+          placeholder='Name' 
           required
         />
         {touched.name && !values.name && (
           <p className="text-red-500 mt-1">Required</p>
         )}
-      </div>
-
-      <div className="mb-4">
-        <label htmlFor="email" className="block mb-2 font-semibold">Email</label>
         <input
           id="email"
           name="email"
@@ -77,6 +73,7 @@ export default function Home() {
           value={values.email}
           onChange={handleChange}
           onBlur={onBlur}
+          placeholder='Name' 
           required
         />
         {touched.email && !values.email && (
@@ -84,7 +81,7 @@ export default function Home() {
         )}
       </div>
 
-      <div className="mb-4">
+
         <label htmlFor="subject" className="block mb-2 font-semibold">Subject</label>
         <input
           id="subject"
@@ -99,7 +96,6 @@ export default function Home() {
         {touched.subject && !values.subject && (
           <p className="text-red-500 mt-1">Required</p>
         )}
-      </div>
 
       <div className="mb-4">
         <label htmlFor="message" className="block mb-2 font-semibold">Message</label>
@@ -119,7 +115,7 @@ export default function Home() {
       </div>
 
       <button
-        className={`bg-blue-500 text-white py-2 px-4 rounded-full ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
+        className={`border shadow-lg p-3 w-full mt-2 ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
         disabled={
           isLoading || !values.name || !values.email || !values.subject || !values.message
         }
@@ -127,6 +123,7 @@ export default function Home() {
       >
         {isLoading ? 'Submitting...' : 'Submit'}
       </button>
+      </form>
     </div>
   );
 }
