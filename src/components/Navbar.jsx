@@ -2,9 +2,7 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import Logo from "../assets/logo.png";
-import Image from 'next/image'
-
-
+import Image from "next/image";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -30,19 +28,21 @@ const Navbar = () => {
 
   return (
     <div
-    style={{ backgroundColor: `${color}` }}
-    className="fixed left-0 top-0 w-full z-10 ease-in duration-300"
-  >
-    <div className="max-w-[1240px] m-auto flex justify-between items-center p-4 text-white">
-      <Link href="/">
-        <h1 style={{ color: `${textColor}` }} className="font-bold text-4xl">
-        <Image
-      src={Logo}
-      width={150}
-      height={150}
-      style={{layout : "responsive" }}
-  />
-        </h1>
+      style={{ backgroundColor: `${color}` }}
+      className="fixed left-0 top-0 w-full z-10 ease-in duration-300"
+    >
+      <div className="max-w-[1240px] m-auto flex justify-between items-center p-4 text-white">
+        <Link href="/">
+          <h1 style={{ color: `${textColor}` }} className="font-bold text-4xl">
+            <Image
+              alt="logo"
+              src={Logo}
+              width={150}
+              height={150}
+              priority={true}
+              style={{ layout: "responsive" }}
+            />
+          </h1>
         </Link>
         <ul style={{ color: `${textColor}` }} className="hidden sm:flex">
           <li className="p-4">
