@@ -73,7 +73,7 @@ export default function Home() {
           value={values.email}
           onChange={handleChange}
           onBlur={onBlur}
-          placeholder='Name' 
+          placeholder='Emai' 
           required
         />
         {touched.email && !values.email && (
@@ -115,7 +115,7 @@ export default function Home() {
       </div>
 
       <button
-        className={`border shadow-lg p-3 w-full mt-2 ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
+        className={`bg-blue-500 border shadow-lg p-3 w-full mt-2 ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
         disabled={
           isLoading || !values.name || !values.email || !values.subject || !values.message
         }
