@@ -1,3 +1,4 @@
+![Capture](https://github.com/N1k0l1n/photofolio/assets/97979235/82eae2b8-c15c-4246-86db-4b587c2d50d6)
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
