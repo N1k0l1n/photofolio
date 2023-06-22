@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 const Navbar = () => {
@@ -10,6 +10,19 @@ const Navbar = () => {
   const handleNav = () => {
     setNav(!nav);
   };
+
+  useEffect(() =>{
+    const changeColor = () =>{
+      if(window.screenY >= 90){
+        setColor('#ffffff')
+        setTextColor('#000000')
+      }else{
+        setColor('transparent')
+        setTextColor('#ffffff')
+      }
+    }
+    window.addEventListener('scroll', changeColor)
+  },[])
 
   return (
     <div

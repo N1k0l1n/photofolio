@@ -10,7 +10,7 @@ export default function Home() {
       <Head>
         <title>PhotoFolio Next App</title>
       </Head>
-      <Hero heading="PhotoFolio" message="Where Beauty Comes Alive" />
+      <Hero heading="Picfolio" message="Where Beauty Comes Alive" />
     </div>
   );
 }
